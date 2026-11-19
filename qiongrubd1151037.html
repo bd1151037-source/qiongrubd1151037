@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鄧氏瓊如 - 個人簡歷</title>
+    <style>
+        /* 基礎設定 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* 亮麗的漸層背景 (蜜桃橘粉色調) */
+            background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* 卡片主體 */
+        .card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(255, 126, 95, 0.2);
+            width: 100%;
+            max-width: 420px;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        /* 照片放置處 (可點擊上傳) */
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            border: 4px solid #ff7e5f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ff7e5f;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            box-shadow: 0 8px 25px rgba(255, 126, 95, 0.4);
+            transform: scale(1.05);
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: none; /* 在上傳照片前隱藏 */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .profile-photo .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 13px;
+            z-index: 2;
+        }
+
+        .profile-photo:hover .overlay {
+            opacity: 1;
+        }
+
+        /* 姓名與簡介 */
+        h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+        .major {
+            color: #ff7e5f;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .bio {
+            font-style: italic;
+            color: #666;
+            font-size: 15px;
+            background: #fff3f0;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        /* 技能與興趣區塊 */
+        .info-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .info-box {
+            flex: 1;
+            background: #fdfdfd;
+            border: 1px solid #ffe4de;
+            border-radius: 16px;
+            padding: 15px;
+        }
+        .info-box h2 {
+            font-size: 14px;
+            color: #ff7e5f;
+            margin-bottom: 8px;
+        }
+        .info-box p {
+            font-size: 14px;
+            color: #444;
+            font-weight: 500;
+        }
+
+        /* 聯絡方式 */
+        .contact {
+            text-align: left;
+            background: #fdfdfd;
+            border: 1px solid #ffe4de;
+            padding: 20px;
+            border-radius: 16px;
+        }
+        .contact h2 {
+            font-size: 16px;
+            color: #ff7e5f;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .contact p {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+        .contact p:last-child {
+            margin-bottom: 0;
+        }
+        .contact strong {
+            display: inline-block;
+            width: 80px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- 點擊此處可觸發隱藏的 input 來上傳圖片 -->
+        <label for="upload-input" class="profile-photo">
+            <span id="placeholder-text">點擊上傳照片<br>(Tải ảnh lên)</span>
+            <img id="photo-preview" src="" alt="瓊如的照片">
+            <div class="overlay">更換照片</div>
+        </label>
+        <!-- 隱藏的檔案上傳標籤 -->
+        <input type="file" id="upload-input" accept="image/*" style="display: none;">
+
+        <h1>鄧氏瓊如</h1>
+        <p class="major">黎明大学数媒系</p>
+        <p class="bio">「喜歡簡單生活，也喜歡認真對待每一件事。」</p>
+
+        <div class="info-group">
+            <div class="info-box">
+                <h2>✨ 我的興趣</h2>
+                <p>讀書、睡覺</p>
+            </div>
+            <div class="info-box">
+                <h2>💡 我的技能</h2>
+                <p>寫代碼、微積分</p>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2>聯絡方式</h2>
+            <p><strong>Email:</strong> bd1151037@venus.lit.edu.tw</p>
+            <p><strong>Line ID:</strong> nguyennhu0607</p>
+            <p><strong>Instagram:</strong> baequynhnhu</p>
+        </div>
+    </div>
+
+    <!-- JavaScript：處理圖片上傳與預覽 -->
+    <script>
+        const uploadInput = document.getElementById('upload-input');
+        const photoPreview = document.getElementById('photo-preview');
+        const placeholderText = document.getElementById('placeholder-text');
+
+        uploadInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                
+                // 當圖片讀取完成後，顯示在畫面上
+                reader.onload = function(e) {
+                    photoPreview.src = e.target.result;
+                    photoPreview.style.display = 'block'; // 顯示圖片
+                    placeholderText.style.display = 'none'; // 隱藏原本的提示文字
+                }
+                
+                // 讀取檔案
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
