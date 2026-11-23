@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曹亦天 | 專業個人主頁</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Noto Sans TC & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            font-family: 'Inter', 'Noto Sans TC', sans-serif; 
+        }
+        /* 淺色科技感網格背景 */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(148, 163, 184, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(148, 163, 184, 0.1) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 flex items-center justify-center p-6 bg-grid text-slate-800 selection:bg-blue-200 selection:text-blue-900">
+
+    <!-- 主容器：寬版排版，提升專業感 -->
+    <main class="w-full max-w-3xl bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200 relative">
+        
+        <!-- 頂部科技藍裝飾條 -->
+        <div class="h-2 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-400 w-full"></div>
+        
+        <div class="p-8 md:p-12">
+            <div class="flex flex-col md:flex-row gap-10 items-center md:items-start">
+                
+                <!-- 左側：個人照片與基本資訊 -->
+                <div class="flex flex-col items-center flex-shrink-0">
+                    <div class="relative w-36 h-36 mb-5">
+                        <div class="absolute inset-0 bg-blue-100 rounded-full animate-pulse"></div>
+                        <img src="images/profile.jpg" alt="曹亦天" class="relative w-full h-full rounded-full object-cover border-4 border-white shadow-md z-10 bg-slate-100">
+                    </div>
+                    <h1 class="text-3xl font-black text-slate-900 tracking-tight">曹亦天</h1>
+                    <p class="text-xs font-bold text-blue-700 mt-3 bg-blue-50 px-4 py-1.5 rounded-full border border-blue-100">
+                        黎明技術學院 數位多媒體系
+                    </p>
+                </div>
+
+                <!-- 右側：簡介、技能與聯絡資訊 -->
+                <div class="flex-1 w-full space-y-8">
+                    
+                    <!-- 簡介區塊 -->
+                    <section>
+                        <h2 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-terminal text-slate-300"></i> About Me
+                        </h2>
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                                「喜歡簡單的生活，也希望每天都能學習新的知識，讓自己變得更好。」
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 專業技能區塊 (新增) -->
+                    <section>
+                        <h2 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-code-branch text-slate-300"></i> Technical Skills
+                        </h2>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 text-slate-600 text-xs font-bold rounded-lg shadow-sm hover:border-blue-400 hover:text-blue-600 transition-colors cursor-default">數位多媒體設計</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 text-slate-600 text-xs font-bold rounded-lg shadow-sm hover:border-blue-400 hover:text-blue-600 transition-colors cursor-default">UI / UX Design</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 text-slate-600 text-xs font-bold rounded-lg shadow-sm hover:border-blue-400 hover:text-blue-600 transition-colors cursor-default">網頁前端開發</span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 text-slate-600 text-xs font-bold rounded-lg shadow-sm hover:border-blue-400 hover:text-blue-600 transition-colors cursor-default">影像處理</span>
+                        </div>
+                    </section>
+
+                    <!-- 聯絡方式區塊 -->
+                    <section>
+                        <h2 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-address-card text-slate-300"></i> Contact
+                        </h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Email -->
+                            <a href="mailto:bd1151009@venus.lit.edu.tw" class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-white hover:border-blue-400 hover:shadow-md transition-all group">
+                                <div class="w-10 h-10 rounded-lg bg-slate-50 text-slate-400 flex items-center justify-center text-lg group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="text-left overflow-hidden">
+                                    <p class="text-[11px] text-slate-400 font-bold">Email</p>
+                                    <p class="text-sm font-bold text-slate-700 truncate">bd1151009@venus...</p>
+                                </div>
+                            </a>
+
+                            <!-- Line ID -->
+                            <div class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-white hover:border-green-400 hover:shadow-md transition-all group">
+                                <div class="w-10 h-10 rounded-lg bg-slate-50 text-slate-400 flex items-center justify-center text-xl group-hover:bg-green-500 group-hover:text-white transition-colors">
+                                    <i class="fa-brands fa-line"></i>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-[11px] text-slate-400 font-bold">Line ID</p>
+                                    <p class="text-sm font-bold text-slate-700">areeyaa_2</p>
+                                </div>
+                            </div>
+
+                            <!-- Instagram -->
+                            <a href="https://instagram.com/jan212550" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-white hover:border-pink-400 hover:shadow-md transition-all group sm:col-span-2">
+                                <div class="w-10 h-10 rounded-lg bg-slate-50 text-slate-400 flex items-center justify-center text-xl group-hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 group-hover:text-white transition-colors">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-[11px] text-slate-400 font-bold">Instagram</p>
+                                    <p class="text-sm font-bold text-slate-700">@jan212550</p>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
